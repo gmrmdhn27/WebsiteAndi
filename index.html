@@ -11,6 +11,7 @@
 			rel="stylesheet"
 		/>
 		<script src="https://unpkg.com/feather-icons"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
@@ -26,8 +27,25 @@
 				<a href="#contacts">Kontak</a>
 			</div>
 			<div class="nav-items">
-				<a href="#"><i data-feather="shopping-cart"></i></a>
+				<a href="#" class="cart-icon">
+					<i data-feather="shopping-cart"></i>
+					<span id="cart-count" class="cart-badge">0</span>
+				</a>
 				<a href="#" id="sidebar"><i data-feather="align-justify"></i></a>
+			</div>
+			<!-- SIDEBAR KERANJANG -->
+			<div id="cart-sidebar" class="cart-sidebar">
+				<div class="cart-header">
+					<h2>Keranjang Belanja</h2>
+					<button id="close-cart" class="close-cart">&times;</button>
+				</div>
+				<div class="cart-items" id="cart-items">
+					<p class="empty-msg">Keranjang masih kosong</p>
+				</div>
+				<div class="cart-footer">
+					<h3>Total: <span id="cart-total">Rp 0</span></h3>
+					<button class="checkout-btn">Checkout</button>
+				</div>
 			</div>
 		</nav>
 
@@ -35,10 +53,16 @@
 		<section class="hero" id="home">
 			<div class="container">
 				<h1 id="typing-text"></h1>
-				<p>
+				<p data-aos="fade-up" data-aos-duration="1200">
 					KOLEKSI KACAMATA KELUARGA DENGAN DESAIN MINIMALIS DAN KUALITAS TERBAIK
 				</p>
-				<a href="#produk" class="btn">Lihat Koleksi</a>
+				<a
+					href="#products"
+					class="btn"
+					data-aos="fade-down"
+					data-aos-duration="1200"
+					>Lihat Koleksi</a
+				>
 			</div>
 		</section>
 
@@ -46,12 +70,14 @@
 		<section class="about" id="about">
 			<div class="container">
 				<div class="about-content">
-					<h2 class="section-title">Tentang YNR OPTICA</h2>
-					<p>
+					<h2 class="section-title" data-aos="fade-up" data-aos-duration="1200">
+						Tentang YNR OPTICA
+					</h2>
+					<p data-aos="fade-right" data-aos-duration="1200">
 						Kami menghadirkan koleksi kacamata premium dengan desain yang
 						timeless dan kualitas yang tidak pernah berkompromi.
 					</p>
-					<p>
+					<p data-aos="fade-left" data-aos-duration="1200">
 						Dengan pengalaman lebih dari 15 tahun, kami memahami kebutuhan akan
 						kacamata yang tidak hanya fungsional, tetapi juga menjadi statement
 						fashion yang elegan.
@@ -63,13 +89,14 @@
 		<!-- Products -->
 		<section class="products" id="products">
 			<div class="container">
-				<h2 class="section-title">KOLEKSI</h2>
+				<h2 class="section-title" data-aos="fade-up" data-aos-duration="1200">
+					KOLEKSI
+				</h2>
 				<div class="product-grid">
-					<div class="product">
+					<div class="product" data-aos="fade-right" data-aos-duration="1200">
 						<div class="product-img">
 							<img
-								src="https://images.unsplash.com/photo-1556306535-38febf6782e7?w=400&h=300&fit=crop&crop=center"
-								alt="Minimalist Frame"
+								src="assets/minimalist.jpg"
 								style="
 									width: 100%;
 									height: 100%;
@@ -86,11 +113,10 @@
 						<button class="btn btn-outline">Pilih</button>
 					</div>
 
-					<div class="product">
+					<div class="product" data-aos="fade-down" data-aos-duration="1200">
 						<div class="product-img">
 							<img
-								src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=300&fit=crop&crop=center"
-								alt="Classic Sunglasses"
+								src="assets/classic.jpg"
 								style="
 									width: 100%;
 									height: 100%;
@@ -105,11 +131,10 @@
 						<button class="btn btn-outline">Pilih</button>
 					</div>
 
-					<div class="product">
+					<div class="product" data-aos="fade-left" data-aos-duration="1200">
 						<div class="product-img">
 							<img
-								src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=400&h=300&fit=crop&crop=center"
-								alt="Progressive Series"
+								src="assets/progresive.jpg"
 								style="
 									width: 100%;
 									height: 100%;
@@ -127,11 +152,10 @@
 						<button class="btn btn-outline">Pilih</button>
 					</div>
 
-					<div class="product">
+					<div class="product" data-aos="fade-right" data-aos-duration="1200">
 						<div class="product-img">
 							<img
-								src="https://images.unsplash.com/photo-1508296695146-257a814070b4?w=400&h=300&fit=crop&crop=center"
-								alt="Vintage Collection"
+								src="assets/vintage.jpg"
 								style="
 									width: 100%;
 									height: 100%;
@@ -148,11 +172,10 @@
 						<button class="btn btn-outline">Pilih</button>
 					</div>
 
-					<div class="product">
+					<div class="product" data-aos="fade-up" data-aos-duration="1200">
 						<div class="product-img">
 							<img
-								src="https://images.unsplash.com/photo-1577803645773-f96470509666?w=400&h=300&fit=crop&crop=center"
-								alt="Sports Frame"
+								src="assets/sport.jpg"
 								style="
 									width: 100%;
 									height: 100%;
@@ -170,11 +193,10 @@
 						<button class="btn btn-outline">Pilih</button>
 					</div>
 
-					<div class="product">
+					<div class="product" data-aos="fade-left" data-aos-duration="1200">
 						<div class="product-img">
 							<img
-								src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=400&h=300&fit=crop&crop=center"
-								alt="Blue Light Filter"
+								src="assets/blueLight.jpg"
 								style="
 									width: 100%;
 									height: 100%;
@@ -224,6 +246,10 @@
 
 		<script>
 			feather.replace();
+		</script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init();
 		</script>
 		<script src="script.js"></script>
 	</body>
