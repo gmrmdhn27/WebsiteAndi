@@ -13,7 +13,7 @@
 }
 
 body {
-	font-family: "Inter", sans-serif;
+	font-family: "Lexend Giga", sans-serif;
 	line-height: 1.6;
 	background: var(--bg);
 	min-height: 100vh;
@@ -54,7 +54,8 @@ body {
 }
 
 .logo {
-	font-size: 19px;
+	font-family: "Outfit";
+	font-size: 1.3rem;
 	font-weight: 900;
 }
 
@@ -73,6 +74,7 @@ body {
 }
 
 .nav-links a {
+	font-size: 1.1rem;
 	color: var(--primary);
 	margin-right: 30px;
 }
@@ -334,7 +336,6 @@ body {
 	background-size: cover;
 	mix-blend-mode: difference;
 	background-attachment: fixed;
-	/* position: relative; */
 	opacity: 0.4;
 	border-bottom-left-radius: 30%;
 	border-bottom-right-radius: 30%;
@@ -363,30 +364,35 @@ body {
 }
 
 .hero h1 {
+	font-family: "Outfit";
 	font-size: 3.5rem;
-	font-weight: 300;
-	margin-bottom: 20px;
+	font-weight: 700;
+	/* margin-bottom: 3px; */
 	color: var(--secondary);
-	letter-spacing: -2px;
+	letter-spacing: 0.5rem;
 }
 
 .hero p {
-	font-size: 1.2rem;
+	font-size: 1rem;
+	font-family: "Inter";
+	letter-spacing: 0.1rem;
 	color: var(--secondary);
 	margin-bottom: 30px;
 	font-weight: 200;
 }
 
 .btn {
+	font-family: "Inter";
 	display: inline-block;
+	font-size: 0.9rem;
 	background: var(--primary);
 	color: var(--bg);
-	padding: 15px 35px;
+	padding: 13px 20px;
 	text-decoration: none;
 	font-weight: 500;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	transition: all 0.3s;
+	transition: 0.3s linear;
 	border-radius: 5px;
 	border: none;
 	cursor: pointer;
@@ -442,6 +448,7 @@ body {
 
 .product {
 	text-align: center;
+	/* padding-top: 15rem; */
 	padding: 30px;
 	background: var(--primary);
 	transition: all 0.3s;
@@ -453,6 +460,17 @@ body {
 	transform: translateY(-5px);
 	box-shadow: 5px 5px 3px var(--hover);
 	/* background: var(--primary); */
+}
+
+.products {
+	padding-top: 8rem;
+}
+
+.products h2 {
+	font-family: "Outfit";
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	font-family: "Outfit";
 }
 
 .product-img {
@@ -480,21 +498,33 @@ body {
 }
 
 .product p {
+	font-family: "Outfit";
+	letter-spacing: 1px;
 	color: var(--bg);
 	font-size: 0.9rem;
+	line-height: 17px;
 	margin-bottom: 20px;
 }
 
 /* About */
 .about {
-	padding: 80px 0;
+	padding: 17rem 0;
 	background: var(--bg);
 	text-align: center;
 	position: relative;
 }
 
+.about h2 {
+	font-size: 3rem;
+	margin-bottom: 25px;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	font-family: "Outfit";
+}
+
 .about p {
-	font-size: 1.1rem;
+	font-size: 1rem;
+	font-style: italic;
 	color: var(--primary);
 	font-weight: 300;
 	margin-bottom: 20px;
@@ -523,13 +553,13 @@ footer {
 .footer h3 {
 	font-weight: 300;
 	color: var(--primary);
-	margin-bottom: 15px;
+	margin-bottom: 11px;
 	letter-spacing: 1px;
 }
 
-.footer p {
+.footer .footer-content p {
 	color: var(--primary);
-	font-weight: 300;
+	font-weight: 100;
 }
 
 .footer-bottom {
