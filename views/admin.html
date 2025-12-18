@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - YNR OPTICA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Updated CSS links -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+  <body>
+    <!-- Login Section -->
+    <div id="login-section" class="admin-login">
+      <div class="login-box">
+        <h2 style="margin-bottom: 20px">Admin Login</h2>
+        <form id="login-form">
+          <div class="form-group">
+            <input
+              type="text"
+              id="username"
+              placeholder="Username"
+              required
+              style="width: 100%; padding: 10px"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+              style="width: 100%; padding: 10px"
+            />
+          </div>
+          <button type="submit" class="btn" style="width: 100%">Masuk</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="dashboard-section" class="admin-container">
+      <div class="admin-header">
+        <h2>Dashboard YNR OPTICA</h2>
+        <button id="logout-btn" class="btn" style="background: #dc3545">
+          Logout
+        </button>
+      </div>
+
+      <div class="admin-tabs">
+        <button class="tab-btn active" onclick="switchTab('products')">
+          Manajemen Produk
+        </button>
+        <button class="tab-btn" onclick="switchTab('orders')">
+          Data Pesanan
+        </button>
+      </div>
+
+      <!-- Product Tab -->
+      <div id="products-tab" class="tab-content active">
+        <button class="add-btn" onclick="openProductModal()">
+          + Tambah Produk
+        </button>
+        <div style="overflow-x: auto">
+          <table id="products-table">
+            <thead>
+              <tr>
+                <th>Gambar</th>
+                <th>Nama Produk</th>
+                <th>Harga</th>
+                <th>Deskripsi</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data will be populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Orders Tab -->
+      <div id="orders-tab" class="tab-content">
+        <div style="overflow-x: auto">
+          <table id="orders-table">
+            <thead>
+              <tr>
+                <th>Tanggal</th>
+                <th>Nama Pelanggan</th>
+                <th>WhatsApp</th>
+                <th>Total</th>
+                <th>Metode</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data will be populated by JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="admin-modal">
+      <div class="admin-modal-content">
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+          "
+        >
+          <h3 id="modal-title">Tambah Produk</h3>
+          <span
+            onclick="closeProductModal()"
+            style="cursor: pointer; font-size: 24px"
+            >&times;</span
+          >
+        </div>
+        <form id="product-form">
+          <input type="hidden" id="edit-index" />
+          <div class="form-group">
+            <label>Nama Produk</label>
+            <input type="text" id="p-name" required />
+          </div>
+          <div class="form-group">
+            <label>Harga (angka saja)</label>
+            <input type="number" id="p-price" required />
+          </div>
+          <div class="form-group">
+            <label>Link Gambar (URL / Path)</label>
+            <input
+              type="text"
+              id="p-image"
+              required
+              placeholder="assets/gambar.jpg"
+            />
+          </div>
+          <div class="form-group">
+            <label>Deskripsi</label>
+            <textarea id="p-desc" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn" style="width: 100%">Simpan</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Updated JS link -->
+    <script src="/js/admin.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

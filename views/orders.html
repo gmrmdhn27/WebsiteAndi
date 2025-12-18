@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Riwayat Pesanan - YNR OPTICA</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Giga:wght@100..900&family=Outfit:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://unpkg.com/feather-icons"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<!-- Midtrans Snap -->
+		<script
+			type="text/javascript"
+			src="https://app.sandbox.midtrans.com/snap/snap.js"
+			data-client-key="Mid-client-P7MQ9h7QVcgP5SAP"
+		></script>
+		<!-- Updated CSS links -->
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/pages.css" />
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar">
+			<div class="navbar-menu">
+				<div class="logo">
+					<a href="/">YNR<span> OPTICA</span></a>
+				</div>
+				<div class="nav-links">
+					<a href="/">Beranda</a>
+					<a href="/#products">Produk</a>
+					<a href="/orders">Riwayat Pesanan</a>
+				</div>
+				<div class="nav-items">
+					<a href="/cart" id="cart-btn" class="cart-icon">
+						<i data-feather="shopping-cart"></i>
+						<span id="cart-count" class="cart-badge">0</span>
+					</a>
+					<a href="#" id="sidebar"><i data-feather="align-justify"></i></a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="page-container">
+			<div class="order-page-content">
+				<div class="order-page-header">
+					<h1>Riwayat Pesanan</h1>
+					<a href="/" class="btn btn-outline">Kembali ke Beranda</a>
+				</div>
+
+				<div id="history-items">
+					<!-- Items injected by JS -->
+					<p class="empty-msg">Memuat riwayat...</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Hidden elements to satisfy script.js selectors if needed -->
+		<div id="history-modal" class="modal" style="display: none"></div>
+		<div id="cart-sidebar" class="cart-sidebar" style="display: none">
+			<button class="close-cart"></button>
+		</div>
+
+		<script>
+			feather.replace();
+		</script>
+		<!-- Updated JS link -->
+		<script src="/js/script.js"></script>
+		<script>
+			// Force load history on this page
+			document.addEventListener("DOMContentLoaded", () => {
+				if (window.loadHistory) {
+					window.loadHistory();
+				}
+			});
+		</script>
+	</body>
+</html>

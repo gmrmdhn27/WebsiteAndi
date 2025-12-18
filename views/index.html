@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>YNR OPTICA - Kacamata Keluarga</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Giga:wght@100..900&family=Outfit:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://unpkg.com/feather-icons"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<!-- Midtrans Snap -->
+		<!-- NOTE: Change client-key to your actual Client Key -->
+		<script
+			type="text/javascript"
+			src="https://app.sandbox.midtrans.com/snap/snap.js"
+			data-client-key="Mid-client-P7MQ9h7QVcgP5SAP"
+		></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<!-- Updated CSS link -->
+		<link rel="stylesheet" href="/css/style.css" />
+	</head>
+	<body>
+		<!-- Preloader -->
+		<div id="preloader">
+			<div class="loader">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</div>
+			<div class="loading-text">YNR OPTICA</div>
+		</div>
+
+		<!-- Navbar -->
+		<nav class="navbar">
+			<div class="sliding-banner">
+				<div class="banner-content">
+					<p class="banner-item">
+						<span>SALE 20% OFF ALL</span>
+					</p>
+					<p class="banner-item">
+						<span>100-DAY EASY RETURNS</span>
+					</p>
+					<p class="banner-item">
+						<span>TUGAS WEB 1 ANDI GEMA DIDIK</span>
+					</p>
+					<p class="banner-item">
+						<span>SALE 20% OFF ALL</span>
+					</p>
+					<p class="banner-item">
+						<span>100-DAY EASY RETURNS</span>
+					</p>
+					<p class="banner-item">
+						<span>TUGAS WEB 1 ANDI GEMA DIDIK</span>
+					</p>
+				</div>
+			</div>
+			<div class="navbar-menu">
+				<div class="logo">
+					<a href="#home">YNR<span> OPTICA</span></a>
+				</div>
+				<div class="nav-links">
+					<a href="#home">Beranda</a>
+					<a href="#about">Tentang kami</a>
+					<a href="#products">Produk</a>
+					<!-- <a href="#contacts">Kontak</a> -->
+				</div>
+				<div class="nav-items">
+					<a href="/orders" class="cart-icon" style="margin-right: 15px">
+						<i data-feather="file-text"></i>
+					</a>
+					<a href="/cart" class="cart-icon">
+						<i data-feather="shopping-cart"></i>
+						<span id="cart-count" class="cart-badge">0</span>
+					</a>
+					<a href="#" id="sidebar"><i data-feather="align-justify"></i></a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Hero -->
+		<section class="hero" id="home">
+			<div id="particles-js"></div>
+			<div class="container">
+				<h1 id="typing-text"></h1>
+				<p data-aos="fade-left" data-aos-duration="1200">
+					KOLEKSI KACAMATA KELUARGA DENGAN DESAIN MINIMALIS DAN KUALITAS TERBAIK
+				</p>
+				<a
+					href="#products"
+					class="btn"
+					data-aos="fade-right"
+					data-aos-duration="1200"
+					>Lihat Koleksi</a
+				>
+			</div>
+		</section>
+
+		<!-- About -->
+		<section class="about" id="about">
+			<div class="container">
+				<div class="about-content">
+					<h2 class="section-title" data-aos="fade-up" data-aos-duration="1200">
+						Tentang YNR OPTICA
+					</h2>
+					<p data-aos="fade-left" data-aos-duration="1200">
+						"Kami menghadirkan koleksi kacamata premium dengan desain yang
+						timeless dan kualitas yang tidak pernah berkompromi."
+					</p>
+					<p data-aos="fade-right" data-aos-duration="1200">
+						"Dengan pengalaman lebih dari 15 tahun, kami memahami kebutuhan akan
+						kacamata yang tidak hanya fungsional, tetapi juga menjadi statement
+						fashion yang elegan."
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Products -->
+		<section class="products" id="products">
+			<div class="container">
+				<h2 class="section-title" data-aos="fade-up" data-aos-duration="1200">
+					KOLEKSI
+				</h2>
+				<div class="product-grid">
+					<!-- Products will be loaded dynamically via JS -->
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer id="contacts" class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<div>
+						<h3>YNR OPTICA</h3>
+						<p>Kacamata premium dengan desain minimalis dan kualitas terbaik</p>
+					</div>
+					<div>
+						<h3>Kontak</h3>
+						<p>
+							Jl. Pasar Senen No. 12<br />Jakarta Pusat<br />Telepon:
+							(+62)81214185456
+						</p>
+					</div>
+					<div>
+						<h3>Jam Buka</h3>
+						<p>
+							Senin - Jumat: 09:00 - 19:00<br />Sabtu - Minggu: 10:00 - 16:00
+						</p>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					<p>&copy; 2025 YNR OPTICA. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			feather.replace();
+		</script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+
+		<!-- Libraries -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+		<!-- Updated JS link -->
+		<script src="/js/script.js"></script>
+		<!-- Custom Cursor -->
+	</body>
+</html>
